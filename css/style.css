@@ -1,0 +1,199 @@
+:root {
+
+    --bg-body: #F4F6F8;
+    --bg-card: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #64748B;
+    --accent-color: #2563EB;
+
+    --accent-light: #EFF6FF;
+    --border-color: #E2E8F0;
+
+
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+
+
+    --radius-md: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.5;
+    padding-bottom: 40px;
+
+}
+
+
+.app-header {
+    background-color: var(--bg-card);
+    padding: var(--space-lg) var(--space-md);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: var(--space-lg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+#current-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.container {
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.section-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    font-weight: 700;
+}
+
+.day-header {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+    text-transform: capitalize;
+}
+
+.section-highlight {
+    margin-bottom: var(--space-lg);
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid transparent;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--accent-color);
+}
+
+
+.card.is-today {
+    border-color: var(--accent-color);
+    background-color: var(--accent-light);
+}
+
+
+
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.time-slot {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+    font-variant-numeric: tabular-nums;
+
+}
+
+.room-badge {
+    background-color: var(--text-primary);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.course-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 8px;
+}
+
+.meta-info {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    gap: 12px;
+}
+
+.day-label {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+
+.empty-state {
+    text-align: center;
+    padding: var(--space-lg);
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border-color);
+}
