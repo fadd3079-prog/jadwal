@@ -1,38 +1,26 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Kuliah</title>
-    <meta name="description" content="Jadwal Kuliah Mobile-First - Cepat & Ringan">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Kuliah</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="app-header">
-        <div class="header-content">
-            <h1>Jadwal Kuliah</h1>
-            <p id="current-date">Memuat tanggal...</p>
-        </div>
-    </header>
+<div class="container">
+  <h1>Jadwal</h1>
 
-    <main class="container">
-        <section id="today-section" class="section-highlight">
-            <h2 class="section-title">Hari Ini</h2>
-            <div id="today-container" class="cards-wrapper">
-            </div>
-        </section>
+  <section id="today">
+    <h2>Hari Ini</h2>
+    <div id="todayList"></div>
+  </section>
 
-        <section id="all-schedule-section">
-            <h2 class="section-title">Jadwal Lengkap</h2>
-            <div id="schedule-container" class="cards-wrapper">
-            </div>
-        </section>
-    </main>
+  <section id="all">
+    <div id="schedule"></div>
+  </section>
+</div>
 
-    <script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
